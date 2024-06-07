@@ -15,11 +15,7 @@ const userFetchService = {
     findAllRoles: async () => await fetch('api/admin/roles'),
     findUserNow: async () => await fetch('api/admin/userNow'),
     findOneUser: async (id) => await fetch(`api/admin/${id}`),
-    addNewUser: async (user) => await fetch('api/admin', {
-        method: 'POST',
-        headers: userFetchService.head,
-        body: JSON.stringify(user)
-    }),
+    addNewUser: async (user) => await fetch('api/admin', { method: 'POST', headers: userFetchService.head, body: JSON.stringify(user)}),
     updateUser: async (user) => await fetch('api/admin', {
         method: 'PUT',
         headers: userFetchService.head,
